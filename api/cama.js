@@ -8,10 +8,10 @@ export default function handler(req, res) {
   res.setHeader("Content-Type", "text/plain; charset=utf-8");
 
   if (!target || target.toLowerCase() === from.toLowerCase()) {
-    return res.send("Debes mencionar a alguien con @. Ej: !cama @usuario");
+    return res.send("Debes escribir 1 usuario. Ejemplo: !cama @usuario");
   }
 
   const p = Math.floor(Math.random() * 100) + 1;
 
-  return res.send(`${from} tiene un chance de ${p}% de llevar a ${target} a la cama. 😏`);
+  return res.send(`@${from} tiene un chance de ${p}% de llevar a @${target} a la cama. 😏`);
 }
